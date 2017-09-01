@@ -1,0 +1,28 @@
+import numpy as np
+import math
+
+def sqdif(x,y):
+    return (x-y)**2
+    
+n = int(input("Enter the size of the array:"))
+U1 = []
+V1 = []
+z = []
+for i in range(1,n+1,1):
+    U1.append(int(input("Enter the values for U:")))
+    V1.append(int(input("Enter the values for V:")))
+    
+    U = np.array(U1)
+    V = np.array(V1)
+    
+    z1 = sqdif(U,V)
+    print("The values of U are :",U)
+    print("The values of V are :",V)
+    print(z1)
+   # z.append(z1)
+T = sum(z1)
+Total = math.sqrt(T)    
+
+print("The values of U are :",U)
+print("The values of V are :",V)
+print("The result is :",Total)
